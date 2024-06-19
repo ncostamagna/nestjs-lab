@@ -63,6 +63,7 @@ $ pnpm run test:cov
 ```sh
 nest g module {module-name} #Creating a new module
 nest g controller {controller-name} #Creating a new controller
+nest g service {service-name} #Creating a new service
 ```
 # Project 
 

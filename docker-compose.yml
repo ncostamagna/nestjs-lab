@@ -1,0 +1,16 @@
+version: "3.5"
+services:
+  nestjs-lab:
+    platform: linux/amd64
+    container_name: nestjs-lab
+    build:
+      context: ./.dockers/mysql
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_DATABASE: 'nestjs-lab'
+      MYSQL_ROOT_PASSWORD: 'root'
+
+    ports:
+      - "3331:3306"
+    volumes:
+      - ./.dockers/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql

@@ -1,7 +1,6 @@
-export interface Product {
-    id: string;
+export interface StoreReq {
     name: string;
     description: string;
-    tag: string[];
+    tags: string[];
     price: number;
 }
