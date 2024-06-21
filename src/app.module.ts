@@ -6,7 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Product } from './products/products.entity';
 
 @Module({
-  imports: [ProductsModule,
+  imports: [
+    ProductsModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
@@ -16,7 +17,8 @@ import { Product } from './products/products.entity';
       database: 'nestjs-lab',
       entities: [Product],
       synchronize: true,
-    })],
+    }),
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
